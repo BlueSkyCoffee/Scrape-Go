@@ -1,6 +1,5 @@
 import { defineConfig } from 'wxt';
 
-// See https://wxt.dev/api/config.html
 export default defineConfig({
   modules: ['@wxt-dev/module-react'],
   srcDir: 'src',
@@ -19,12 +18,28 @@ export default defineConfig({
       '*://*.xiaohongshu.com/*',
       '*://*.xhslink.com/*'
     ],
+    action: {
+      default_icon: {
+        '16': 'icon/16.png',
+        '32': 'icon/32.png',
+        '48': 'icon/48.png',
+        '96': 'icon/96.png',
+        '128': 'icon/128.png'
+      },
+      default_title: '打开 Scrape-Go 侧边栏'
+    },
     side_panel: {
       default_path: 'sidepanel.html'
     },
-    options_ui: {
-      page: 'options.html',
-      open_in_tab: true
+    options_page: 'options.html',
+    commands: {
+      '_execute_action': {
+        suggested_key: {
+          default: 'Ctrl+Shift+Y',
+          mac: 'Command+Shift+Y'
+        },
+        description: '打开侧边栏'
+      }
     }
   }
 });
