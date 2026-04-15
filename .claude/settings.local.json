@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm dlx *)",
+      "Read(//src/components/ui/**)",
+      "Bash(find / -name \"empty.tsx\" -path \"*/components/ui/*\")",
+      "Bash(pnpm compile *)",
+      "Bash(pnpm build *)",
+      "Bash(ls /Users/apple/Desktop/Scrape-Go/src/components/ui/*.tsx)",
+      "Bash(xargs -I{} basename {})"
+    ]
+  }
+}

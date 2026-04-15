@@ -1,5 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react';
+import { Toaster } from 'sonner';
 import '@/index.css';
 import './App.css';
 import App from './App';
@@ -11,5 +12,6 @@ const root = createRoot(container);
 root.render(
   <StrictMode>
     <App />
+    <Toaster position="top-right" richColors />
   </StrictMode>
 );

@@ -5,6 +5,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import type { ScrapedData, XiaohongshuNote } from '../types';
 import { Download, Trash2, RefreshCw, CheckCircle, XCircle, Heart, Star, MessageSquare, Settings } from 'lucide-react';
 import './App.css';
@@ -163,14 +164,17 @@ export default function App() {
             Scrape-Go
             <Badge variant="secondary" className="text-xs">v1.0.0</Badge>
           </h1>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={handleOpenOptions}
-            title="打开设置"
-          >
-            <Settings className="w-4 h-4" />
-          </Button>
+          <div className="flex items-center gap-2">
+            <ThemeSwitcher />
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={handleOpenOptions}
+              title="打开设置"
+            >
+              <Settings className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
         <div className="flex gap-2 mb-3">
           <Button
